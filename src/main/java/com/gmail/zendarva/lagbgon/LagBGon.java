@@ -20,9 +20,8 @@ import cpw.mods.fml.relauncher.Side;
 @Mod(name = "Lag'B'Gon Only Clean Items&Entities", modid = LagBGon.MODID, version = LagBGon.VERSION)
 public class LagBGon
 {
-    public static final String MODID = "LagBGonOnlyClear";
+    public static final String MODID = "LagBGonOnlyClean";
     public static final String VERSION = ".0.1";
-    
     @Mod.Instance("lagbgonOnlyClear")
     public static LagBGon instance;
     
