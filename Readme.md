@@ -1,10 +1,10 @@
 # LagBGon Only Clean
 
-## About LagBGon Only Clean
+## About
 【LagBGon Only Clean】 is a fork of 【LagBGon】 that let this Mod Only Handle Item/Entity Clear Work,   
 And Items Clear as WhiteList, Entity Clear as BlackList.
 
-## The Commands List
+## Commands List
 /bgon toggleitem : toggles the whitelist status of held item.   
 /bgon toggleentity <name>: toggles the blacklist status of the named entity.   
 /bgon clear : Clears all items not on whitelist and entities on blacklist.   
