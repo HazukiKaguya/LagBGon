@@ -57,11 +57,11 @@ public class MainCommand extends CommandBase {
 				sender.addChatMessage(chat);
 				chat = new ChatComponentText("/bgon toggleentity <name>: toggles the blacklist status of the named entity");
 				sender.addChatMessage(chat);
-				chat = new ChatComponentText("/bgon clear : Clears all items from the world not on whitelist and entities on blacklist");
+				chat = new ChatComponentText("/bgon clear : Clears all items from the world not on whitelist and all entities on blacklist");
 				sender.addChatMessage(chat);
 				chat = new ChatComponentText("/bgon interval <minutes> : sets the interval for automatic running of /bgon clear" );
 				sender.addChatMessage(chat);
-				chat = new ChatComponentText("/bgon toggleauto : Toggles automatic clearing of entities, and unloading of chunks.");
+				chat = new ChatComponentText("/bgon toggleauto : Toggles automatic clearing of entities.");
 				sender.addChatMessage(chat);
 				chat = new ChatComponentText("/bgon listitems : Lists the items in the whitelist.");
 				sender.addChatMessage(chat);
@@ -156,12 +156,12 @@ public class MainCommand extends CommandBase {
 
 					if (!config.isBlacklisted(plr.getCurrentEquippedItem().getItem()))
 					{
-						chat = new ChatComponentText(item.getItemStackDisplayName(plr.getCurrentEquippedItem()) + " removed from blacklist.");
+						chat = new ChatComponentText(item.getItemStackDisplayName(plr.getCurrentEquippedItem()) + " removed from whitelist.");
 						sender.addChatMessage(chat);
 					}
 					else
 					{
-						chat = new ChatComponentText(item.getItemStackDisplayName(plr.getCurrentEquippedItem()) + " added to blacklist.");
+						chat = new ChatComponentText(item.getItemStackDisplayName(plr.getCurrentEquippedItem()) + " added to whitelist.");
 						sender.addChatMessage(chat);
 					}
 
@@ -285,7 +285,7 @@ public class MainCommand extends CommandBase {
 			toRemove.clear();
 		}
 		ChatComponentText chat = new ChatComponentText("Lag'B'Gon has removed " + itemsRemoved + " items and ");
-		chat.appendText(entitiesRemoved + " entities");
+		chat.appendText(entitiesRemoved + " entities!");
 		MinecraftServer.getServer().getConfigurationManager().sendChatMsg(chat);
 	}
 
